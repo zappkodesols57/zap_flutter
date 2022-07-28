@@ -3,6 +3,9 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:zap_flutter/Authentication/background.dart';
 
 import 'Authentication/constants.dart';
+import 'package:get/get.dart';
+
+
 
 class MESupport extends StatefulWidget {
   const MESupport({Key key}) : super(key: key);
@@ -16,8 +19,8 @@ class _MESupportState extends State<MESupport> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Support and FAQ's"),
-        backgroundColor: kPrimaryColorBlue,
+        title: Text("s_faq".tr),
+        backgroundColor:kPrimaryColorBlue,
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
@@ -38,9 +41,9 @@ class _MESupportState extends State<MESupport> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(
-                        color: kPrimaryColorDarkBlue,
-                        width: 0.8,
-                      )),
+                        color: kPrimaryColorDarkBlue,width: 0.8,
+                      )
+                  ),
                   child: ListTile(
                     // leading: Padding(
                     //   padding: const EdgeInsets.only(top: 12.0),
@@ -51,19 +54,14 @@ class _MESupportState extends State<MESupport> {
                     // ),
                     title: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("General"),
+                      child: Text("General".tr),
                     ),
                     // trailing: Text("Rs. 200.00",style: TextStyle(color: Colors.blue),),
 
                     trailing: IconButton(
-                      icon: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.blue,
-                        size: 15.0,
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => MEFAQ()));
+                      icon: Icon(Icons.arrow_forward_ios,color: Colors.blue,size: 15.0,),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MEFAQ()));
                       },
                     ),
                   ),
@@ -76,9 +74,9 @@ class _MESupportState extends State<MESupport> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(
-                        color: kPrimaryColorDarkBlue,
-                        width: 0.8,
-                      )),
+                        color: kPrimaryColorDarkBlue,width: 0.8,
+                      )
+                  ),
                   child: ListTile(
                     // leading: Padding(
                     //   padding: const EdgeInsets.only(top: 12.0),
@@ -90,22 +88,19 @@ class _MESupportState extends State<MESupport> {
                     title: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                          width: 80.0, child: Text("Still Need Help?")),
+                          width: 80.0,
+                          child: Text("Still Need Help?".tr)),
                     ),
                     // trailing: Text("Rs. 200.00",style: TextStyle(color: Colors.blue),),
 
                     trailing: IconButton(
-                      icon: Icon(
-                        Icons.help,
-                        color: Colors.blue,
-                      ),
+                      icon: Icon(Icons.help,color: Colors.blue,),
                       // Text("Get In Touch",style: TextStyle(
                       //   color: Colors.blue,
                       //   fontSize: 10.0
                       // ),),
-                      onPressed: () {
-                        launch(
-                            'mailto:sae@gmail.com?subject=I need help&body=I am writing this mail for help regarding SAE App');
+                      onPressed: (){
+                        launch('mailto:sae@gmail.com?subject=I need help&body=I am writing this mail for help regarding SAE App');
                       },
                     ),
                   ),
@@ -119,6 +114,11 @@ class _MESupportState extends State<MESupport> {
   }
 }
 
+
+
+
+
+
 class MEFAQ extends StatefulWidget {
   const MEFAQ({Key key}) : super(key: key);
 
@@ -130,12 +130,11 @@ class _MEFAQState extends State<MEFAQ> {
   bool isVisible = false;
   bool isVisible1 = false;
   bool isVisible2 = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("FAQ's"),
+          title: Text("FAQ's".tr),
           elevation: 0,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -165,39 +164,32 @@ class _MEFAQState extends State<MEFAQ> {
                         child: Container(
                           height: 40.0,
                           width: 40.0,
-                          child: Image.asset("assets/SAE.png"),
-                        ),
+                          child: Image.asset("assets/SAE.png"),),
                       ),
                       title: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "What is SAE",
-                          style: TextStyle(
-                              // fontWeight: FontWeight.bold,
-                              fontFamily: 'SansBold'),
-                        ),
+                        child: Text("What is ZAP".tr,style: TextStyle(
+                          // fontWeight: FontWeight.bold,
+                            fontFamily: 'SansBold'
+                        ),),
                       ),
-                      onTap: () {
+                      onTap: (){
                         setState(() {
                           isVisible = !isVisible;
                         });
                       },
                       // trailing: Text("Rs. 200.00",style: TextStyle(color: Colors.blue),),
 
-                      subtitle: isVisible
-                          ? Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Text(
-                                  "SAE is E-Governance app where you can register yourself to make agent and earn some money",
-                                  style: TextStyle(
-                                      color: Colors.blue,
-                                      fontFamily: 'SansLight')),
-                            )
-                          : null,
+                      subtitle:isVisible? Padding(
+                        padding: const EdgeInsets.only(left:8.0),
+                        child: Text( "E-Governance app".tr,
+                            style: TextStyle(color: Colors.blue,
+                                fontFamily: 'SansLight'
+                            )),
+                      ): null,
                     ),
                   ),
-                ),
-                Padding(
+                ), Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
                     // elevation: 4,
@@ -213,35 +205,28 @@ class _MEFAQState extends State<MEFAQ> {
                         child: Container(
                           height: 40.0,
                           width: 40.0,
-                          child: Image.asset("assets/SAE.png"),
-                        ),
+                          child: Image.asset("assets/SAE.png"),),
                       ),
                       title: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "What if I forget the password?",
-                          style: TextStyle(fontFamily: 'SansBold'),
-                        ),
+                        child: Text("What if I forget the password?".tr,style: TextStyle(
+                            fontFamily: 'SansBold'
+                        ),),
                       ),
-                      onTap: () {
+                      onTap: (){
                         setState(() {
                           isVisible1 = !isVisible1;
                         });
                       },
                       // trailing: Text("Rs. 200.00",style: TextStyle(color: Colors.blue),),
 
-                      subtitle: isVisible1
-                          ? Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Text(
-                                  "Just click on Forgot Password. Enter the required details and you can easily create a new password",
-                                  style: TextStyle(color: Colors.blue)),
-                            )
-                          : null,
+                      subtitle: isVisible1?Padding(
+                        padding: const EdgeInsets.only(left:8.0),
+                        child: Text("Just click on Forgot Password".tr,style: TextStyle(color: Colors.blue)),
+                      ):null,
                     ),
                   ),
-                ),
-                Padding(
+                ), Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
                     // elevation: 4,
@@ -257,37 +242,32 @@ class _MEFAQState extends State<MEFAQ> {
                         child: Container(
                           height: 40.0,
                           width: 40.0,
-                          child: Image.asset("assets/SAE.png"),
-                        ),
+                          child: Image.asset("assets/SAE.png"),),
                       ),
                       title: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "Is it necessary to provide a mobile number and email?",
-                          style: TextStyle(fontFamily: 'SansBold'),
-                        ),
+                        child: Text("Is it necessary to provide a mobile number and email?".tr,style: TextStyle(
+                            fontFamily: 'SansBold'
+                        ),),
                       ),
-                      onTap: () {
+                      onTap: (){
                         setState(() {
                           isVisible2 = !isVisible2;
                         });
                       },
                       // trailing: Text("Rs. 200.00",style: TextStyle(color: Colors.blue),),
 
-                      subtitle: isVisible2
-                          ? Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Text(
-                                  "Yes, it i9s necessary to provide a mobile number, email is optional.",
-                                  style: TextStyle(color: Colors.blue)),
-                            )
-                          : null,
+                      subtitle: isVisible2?Padding(
+                        padding: const EdgeInsets.only(left:8.0),
+                        child: Text("Yes, it is".tr,style: TextStyle(color: Colors.blue)),
+                      ):null,
                     ),
                   ),
                 ),
               ],
             ),
           ),
-        ));
+        )
+    );
   }
 }

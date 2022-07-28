@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:zap_flutter/Authentication/background.dart';
 
 import 'Authentication/constants.dart';
-
+import 'package:get/get.dart';
 class FeedbackShare extends StatefulWidget {
   @override
   _FeedbackShareState createState() => _FeedbackShareState();
@@ -15,11 +16,11 @@ class _FeedbackShareState extends State<FeedbackShare> {
   Color suggestionTextColor = kPrimaryColorDarkBlue;
   Color bugsContainerColor = Colors.white;
   Color bugsTextColor = kPrimaryColorDarkBlue;
-
   // String mobile, token;
-  bool _isBug = false;
+  bool _isBug= false;
 
   TextEditingController cmtController = new TextEditingController();
+
 
   @override
   void initState() {
@@ -34,6 +35,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
     cmtController.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -41,11 +43,8 @@ class _FeedbackShareState extends State<FeedbackShare> {
       key: _scaffoldKey,
       appBar: AppBar(
         // backgroundColor: Color(0xffFC9D3A),
-        title: Text(
-          'Feedback',
-          style: TextStyle(fontFamily: "Sans"),
-        ),
-        backgroundColor: kPrimaryColorBlue,
+        title: Text('feedback'.tr,style: TextStyle(fontFamily: "Sans"),),
+        backgroundColor:kPrimaryColorBlue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -60,8 +59,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
-                child: Text(
-                  "Select type of feedback",
+                child: Text("Select type of feedback".tr,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 15.0,
@@ -92,7 +90,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                       child: Center(
                         child: Text(
-                          'Suggestions',
+                          'Suggestions'.tr,
                           style: TextStyle(
                             color: suggestionTextColor,
                             fontSize: 18,
@@ -122,7 +120,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                       child: Center(
                         child: Text(
-                          'Bugs',
+                          'Bugs'.tr,
                           style: TextStyle(
                             color: bugsTextColor,
                             fontSize: 18,
@@ -148,25 +146,21 @@ class _FeedbackShareState extends State<FeedbackShare> {
                     //   color: kPrimaryColorBlue,
                     // ),
                     border: InputBorder.none,
-                    labelText: 'Comments',
+                    labelText: 'Comments'.tr,
                     labelStyle: TextStyle(
                         fontFamily: "Sans",
                         fontSize: 15.0,
                         color: kPrimaryColorDarkBlue),
                     alignLabelWithHint: true,
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 13.0, horizontal: 30.0),
+                    contentPadding:
+                    const EdgeInsets.symmetric(vertical: 13.0, horizontal: 30.0),
                     enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: kPrimaryColorDarkBlue, width: 1),
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(35.0)),
+                      borderSide: BorderSide(color: kPrimaryColorDarkBlue, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(35.0)),
                     ),
                     focusedBorder: new OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: kPrimaryColorDarkBlue, width: 1),
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(35.0)),
+                      borderSide: BorderSide(color: kPrimaryColorDarkBlue, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(35.0)),
                     ),
                   ),
                 ),
@@ -176,14 +170,15 @@ class _FeedbackShareState extends State<FeedbackShare> {
                 child: MaterialButton(
                     color: kPrimaryColorBlue,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(30)
+                    ),
                     highlightColor: Colors.transparent,
                     splashColor: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 15.0, horizontal: 52.0),
                       child: Text(
-                        "Submit",
+                        "Submit".tr,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -192,7 +187,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
                       ),
                     ),
                     onPressed: () {
-                      showInSnackBar("Submitted successfully");
+                      showInSnackBar("Submitted successfully".tr);
                     }),
               ),
             ],
@@ -236,4 +231,7 @@ class _FeedbackShareState extends State<FeedbackShare> {
       duration: Duration(seconds: 2),
     ));
   }
+
+
+
 }
