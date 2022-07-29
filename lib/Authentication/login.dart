@@ -10,6 +10,7 @@ import '../HomeScreen.dart';
 import '../constants.dart';
 import 'background.dart';
 import 'register.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key key}) : super(key: key);
@@ -22,6 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       isCollapsed: true,
                       contentPadding: EdgeInsets.only(top: 16),
                       border: InputBorder.none,
-                      hintText: "Username",
+                      hintText: "username".tr,
                       hintStyle: TextStyle(
                           fontSize: 14,
                           color: Color(0xFF3d68d9),
@@ -153,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       isCollapsed: true,
                       contentPadding: EdgeInsets.only(top: 16),
                       border: InputBorder.none,
-                      hintText: "Password *",
+                      hintText: "password".tr,
                       hintStyle: TextStyle(
                           fontSize: 14,
                           color: Color(0xFF3d68d9),
@@ -179,7 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 alignment: Alignment.centerRight,
                 margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                 child: Text(
-                  "Forgot your password?",
+                  "forgot your password?".tr,
                   style: TextStyle(fontSize: 13, color: Color(0XFF2661FA)),
                 ),
               ),
@@ -211,7 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ])),
                     padding: const EdgeInsets.all(0),
                     child: Text(
-                      "LOGIN",
+                      "Login".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -230,7 +232,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) => RegisterScreen()))
                   },
                   child: Text(
-                    "Don't Have an Account? Sign up",
+                    "Don't Have an Account? Sign up".tr,
                     style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
@@ -249,11 +251,11 @@ class _LoginScreenState extends State<LoginScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if ((usernameController.text.isEmpty ||
         usernameController.text.length < 10)) {
-      showInSnackBar("Please enter valid Number");
+      showInSnackBar("Please enter valid Number".tr);
       return null;
     }
     if (passwordController.text.isEmpty) {
-      showInSnackBar("Please enter valid Password");
+      showInSnackBar("Please enter valid Password".tr);
       return null;
     }
     //
@@ -301,7 +303,7 @@ class _LoginScreenState extends State<LoginScreen> {
         (Route<dynamic> route) => false,
       );
     } else {
-      showInSnackBar("Something Went Wrong");
+      showInSnackBar("Something Went Wrong".tr);
     }
   }
 

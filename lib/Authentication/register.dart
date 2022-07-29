@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../constants.dart';
 import 'background.dart';
 import 'login.dart';
+import 'package:get/get.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key key}) : super(key: key);
@@ -51,7 +52,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
-                  "REGISTER",
+                  "REGISTER".tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.deepOrange.shade300,
@@ -131,7 +132,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           inputFormatters: [
                             LengthLimitingTextInputFormatter(15)
                           ],
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                               prefixIcon:
                                   Icon(Icons.person, color: Color(0xFF3d68d9)),
                               border: OutlineInputBorder(
@@ -154,10 +155,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               enabledBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Color(0xFF3d68d9)),
-                                borderRadius: const BorderRadius.all(
+                                borderRadius:  BorderRadius.all(
                                     Radius.circular(15.0)),
                               ),
-                              labelText: 'First Name *',
+                              labelText: 'First Name'.tr,
                               labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                         ),
                       ),
@@ -169,7 +170,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           inputFormatters: [
                             LengthLimitingTextInputFormatter(15)
                           ],
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                               prefixIcon:
                                   Icon(Icons.person, color: Color(0xFF3d68d9)),
                               border: OutlineInputBorder(
@@ -195,7 +196,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(15.0)),
                               ),
-                              labelText: 'Last Name *',
+                              labelText: 'Last Name'.tr,
                               labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                         ),
                       ),
@@ -268,7 +269,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: TextField(
                     controller: mobileController,
                     inputFormatters: [LengthLimitingTextInputFormatter(10)],
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         prefixIcon: Icon(Icons.call, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFF3d68d9)),
@@ -290,7 +291,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(15.0)),
                         ),
-                        labelText: 'Mobile No. *',
+                        labelText: 'Mobile Number'.tr,
                         labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                   ),
                 ),
@@ -311,7 +312,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: TextField(
                     controller: emailController,
                     inputFormatters: [LengthLimitingTextInputFormatter(25)],
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         prefixIcon: Icon(Icons.email, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFF3d68d9)),
@@ -333,7 +334,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(15.0)),
                         ),
-                        labelText: 'Email *',
+                        labelText: 'Email'.tr,
                         labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                   ),
                 ),
@@ -354,7 +355,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: TextField(
                     controller: referalController,
                     inputFormatters: [LengthLimitingTextInputFormatter(6)],
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         prefixIcon: Icon(Icons.pin, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFF3d68d9)),
@@ -376,7 +377,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(15.0)),
                         ),
-                        labelText: 'Referral Code',
+                        labelText: 'Referral Code'.tr,
                         labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                   ),
                 ),
@@ -397,7 +398,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: TextField(
                     controller: passwordController,
                     inputFormatters: [LengthLimitingTextInputFormatter(16)],
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         prefixIcon:
                             Icon(Icons.password, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
@@ -420,7 +421,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(15.0)),
                         ),
-                        labelText: 'Password *',
+                        labelText: 'password'.tr,
                         labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                   ),
                 ),
@@ -440,7 +441,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: TextField(
                     controller: confirmPassController,
                     inputFormatters: [LengthLimitingTextInputFormatter(16)],
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         prefixIcon:
                             Icon(Icons.password, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
@@ -463,7 +464,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(15.0)),
                         ),
-                        labelText: 'Confirm Password *',
+                        labelText: 'Confirm Password'.tr,
                         labelStyle: TextStyle(color: Color(0xFF3d68d9))),
                   ),
                 ),
@@ -492,7 +493,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ])),
                     padding: const EdgeInsets.all(0),
                     child: Text(
-                      "SIGN UP",
+                      "SIGN UP".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -509,7 +510,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         MaterialPageRoute(builder: (context) => LoginScreen()))
                   },
                   child: Text(
-                    "Already Have an Account? Sign in",
+                    "Already Have an Account? Sign in".tr,
                     style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
@@ -528,28 +529,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     if (firstnameController.text.isEmpty) {
-      showInSnackBar("Please enter first name ", 2);
+      showInSnackBar("Please enter first name".tr, 2);
       return null;
     }
     if (lastnameController.text.isEmpty) {
-      showInSnackBar("Please enter last name ", 2);
+      showInSnackBar("Please enter last name".tr, 2);
       return null;
     }
     if ((mobileController.text.isEmpty || mobileController.text.length < 10)) {
-      showInSnackBar("Enter mobile number", 2);
+      showInSnackBar("Enter mobile number".tr, 2);
       return null;
     }
     if (passwordController.text.isEmpty) {
-      showInSnackBar("please enter password", 2);
+      showInSnackBar("please enter password".tr, 2);
       return null;
     }
     if (passwordController.text.length < 8) {
-      showInSnackBar("Password must contain 8 character", 2);
+      showInSnackBar("Password must contain 8 character".tr, 2);
       return null;
     }
     if (confirmPassController.text.isEmpty ||
         passwordController.text != confirmPassController.text) {
-      showInSnackBar("Password not match", 2);
+      showInSnackBar("Password not match".tr, 2);
       return null;
     }
 
@@ -596,7 +597,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       //   showInSnackBar(responseJson['message'],2);
       // }
     } else {
-      showInSnackBar("Something went wrong", 2);
+      showInSnackBar("Something went wrong".tr, 2);
     }
   }
 

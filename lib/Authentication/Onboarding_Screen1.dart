@@ -5,6 +5,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 
 import '../constants.dart';
 import 'login.dart';
+import 'package:get/get.dart';
 
 class App extends StatelessWidget {
   @override
@@ -88,8 +89,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ),
           ),
           child: ElevatedButton(
-            child: const Text(
-              'Let\'s go right away!',
+            child: Text(
+              'Let\'s go right away!'.tr,
               style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             onPressed: () => _onIntroEnd(context),
@@ -98,28 +99,28 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       ),
       pages: [
         PageViewModel(
-          title: "ZAP App ",
+          title: "ZAP App".tr,
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+              "Instead of having to buy an entire share, invest any amount you want.".tr,
           image: _buildImage('images/zaplogo.jpg'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Let\'s make customers to together",
-          body: "See All Services Provided by SAE App.",
+          title: "Let\'s make customers to together".tr,
+          body: "See All Services Provided by ZAP App.".tr,
           image: _buildImage('screen 01 zap.jpg'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Let\'s Fill the Form",
-          body: "Fill the form for services you have applied for.",
+          title: "Let\'s Fill the Form".tr,
+          body: "Fill the form for services you have applied for.".tr,
           image: _buildImage('screen 02 zap.jpg'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Payments",
+          title: "Payments".tr,
           body:
-              "Here do payment for your services you have applied for after that you can download your certificate.",
+              "Here do payment for your services you have applied for after that you can download your certificate.".tr,
           image: _buildImage('screen 03 zap.jpg'),
           // decoration: pageDecoration.copyWith(
           //   contentMargin: const EdgeInsets.symmetric(horizontal: 16),
@@ -130,9 +131,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Certificate",
+          title: "Certificate".tr,
           body:
-              "After completion of your payment process you can be able to download the certificate.",
+              "After completion of your payment process you can be able to download the certificate.".tr,
           image: _buildImage('screen 04 zap.jpg'),
           // footer: ElevatedButton(
           //   onPressed: () {
@@ -152,13 +153,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Title of last page - reversed",
+          title: "Title of last page - reversed".tr,
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text("Click on ", style: bodyStyle),
+            children:  [
+              Text("Click on ".tr, style: bodyStyle),
               Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
+              Text(" to edit a post".tr, style: bodyStyle),
             ],
           ),
           decoration: pageDecoration.copyWith(
@@ -179,10 +180,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       showBackButton: true,
       //rtl: true, // Display as right-to-left
       back: const Icon(Icons.arrow_back),
-      skip: const Text('Skip',
+      skip:  Text('Skip'.tr,
           style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
       next: const Icon(Icons.arrow_forward),
-      done: const Text('Done',
+      done: Text('Done'.tr,
           style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),

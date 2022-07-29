@@ -33,22 +33,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<BarChartModel> data = [
     BarChartModel(
-      year: "Services\nSold",
+      year: "Services\nSold".tr,
       financial: 500,
       color: charts.ColorUtil.fromDartColor(Color(0xFF3d68d9)),
     ),
     BarChartModel(
-      year: "Payment\nCollected",
+      year: "Payment\nCollected".tr,
       financial: 3000,
       color: charts.ColorUtil.fromDartColor(Color(0xFF3d68d9)),
     ),
     BarChartModel(
-      year: "Payment\nSent",
+      year: "Payment\nSent".tr,
       financial: 3000,
       color: charts.ColorUtil.fromDartColor(Color(0xFF3d68d9)),
     ),
     BarChartModel(
-      year: "Commission\nEarned",
+      year: "Commission\nEarned".tr,
       financial: 1200,
       color: charts.ColorUtil.fromDartColor(Color(0xFF3d68d9)),
     ),
@@ -535,7 +535,7 @@ class _HomeScreenState extends State<HomeScreen> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       color: kPrimaryColorDarkBlue,
       child: Text(
-        "Yes, Logout!",
+        "Yes, Logout!".tr,
         style: TextStyle(
             color: Colors.white,
             fontFamily: "Sans",
@@ -553,7 +553,7 @@ class _HomeScreenState extends State<HomeScreen> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       color: kPrimaryColorRed,
       child: Text(
-        "Cancel",
+        "Cancel".tr,
         style: TextStyle(
             color: Colors.white,
             fontFamily: "Sans",
@@ -567,7 +567,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       content: Text(
-        "Are you sure you want to log out.",
+        "Are you sure you want to log out.".tr,
         style: TextStyle(fontFamily: "Sans"),
       ),
       actions: [
@@ -595,17 +595,17 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Do you want to exit?"),
+                  Text("Do you want to exit?".tr),
                   SizedBox(height: 20),
                   Row(
                     children: [
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
-                            print('yes selected');
+                            print('yes selected'.tr);
                             exit(0);
                           },
-                          child: Text("Yes"),
+                          child: Text("Yes".tr),
                           style: ElevatedButton.styleFrom(
                               primary: kPrimaryColorBlue),
                         ),
@@ -614,11 +614,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       Expanded(
                           child: ElevatedButton(
                         onPressed: () {
-                          print('no selected');
+                          print('no selected'.tr);
                           Navigator.of(context).pop();
                         },
                         child:
-                            Text("No", style: TextStyle(color: Colors.white)),
+                            Text("No".tr, style: TextStyle(color: Colors.white)),
                         style: ElevatedButton.styleFrom(
                           primary: Colors.red.shade800,
                         ),

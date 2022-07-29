@@ -152,7 +152,7 @@ class LocaleString extends Translations {
           "Enquiry for Backend Developer.":"Enquiry for Backend Developer.",
           "Enquiry for S.E.O.":"Enquiry for S.E.O.",
           "Enquiry for Digital Marketing.":"Enquiry for Digital Marketing.",
-          "username":"username",
+          "username":"Username",
           "password":"password",
           "Okay i remember":"Okay i remember",
           "Okay i removed":"Okay i removed",
@@ -169,6 +169,38 @@ class LocaleString extends Translations {
           "Yes":"Yes",
           "yes selected":"yes selected",
           "no selected":"no selected",
+          "Services\nSold":"Services\nSold",
+          "Payment\nCollected":"Payment\nCollected",
+          "Payment\nSent":"Payment\nSent",
+          "Commission\nEarned":"Commission\nEarned",
+          "Something Went Wrong":"Something Went Wrong",
+          "forgot your password?": "forgot your password?",
+          "Don't Have an Account? Sign up":"Don't Have an Account? Sign up",
+          "Please enter valid Number":"Please enter valid Number",
+          "Please enter valid Password":"Please enter valid Password",
+          "REGISTER":"REGISTER",
+          "Referral Code":"Referral Code",
+          "Confirm Password":"Confirm Password",
+          "SIGN UP":"SIGN UP",
+          "Let\'s go right away!":"Let\'s go right away!",
+          "Done":"Done",
+          "Certificate":"Certificate",
+          "After completion of your payment process you can be able to download the certificate.":"After completion of your payment process you can be able to download the certificate.",
+          "Payments":"Payments",
+          "Here do payment for your services you have applied for after that you can download your certificate.": "Here do payment for your services you have applied for after that you can download your certificate.",
+          "Let\'s Fill the Form":"Let\'s Fill the Form",
+          "Fill the form for services you have applied for.":"Fill the form for services you have applied for.",
+          "See All Services Provided by ZAP App.":"See All Services Provided by ZAP App.",
+          "Let\'s make customers to together":"Let\'s make customers to together",
+          "Instead of having to buy an entire share, invest any amount you want.": "Instead of having to buy an entire share, invest any amount you want.",
+          "ZAP App":"ZAP App",
+
+
+
+
+
+
+
         },
         //HINDI LANGUAGE
         'hi_IN': {
@@ -338,6 +370,39 @@ class LocaleString extends Translations {
           "Yes":"हाँ",
           "yes selected":"हाँ चयनित",
           "no selected":"कोई चयनित नहीं",
+          "Services\nSold":"सेवाएं\nबेची गई",
+          "Payment\nCollected":"भुगतान\nएकत्रित",
+          "Payment\nSent":"भुगतान\nभेजा गया",
+          "Commission\nEarned":"कमीशन\nअर्जित",
+          "Something Went Wrong":"कुछ गलत हो गया",
+          "forgot your password?": "क्या आप पासवर्ड भूल गए?",
+          "Don't Have an Account? Sign up":"खाता नहीं है? साइन अप करें",
+          "Please enter valid Number":"कृपया मान्य संख्या दर्ज करें",
+          "Please enter valid Password":"कृपया मान्य पासवर्ड दर्ज करें",
+          "REGISTER":"रजिस्टर करें",
+          "Referral Code":"रेफरल कोड",
+          "Confirm Password":"पासवर्ड की पुष्टि कीजिये",
+          "SIGN UP":"साइन अप करें",
+          "Let\'s go right away!":"चलो तुरंत चलते हैं!",
+          "Done":"पूर्ण",
+          "Certificate":"प्रमाणपत्र",
+          "After completion of your payment process you can be able to download the certificate.":"अपनी भुगतान प्रक्रिया पूरी होने के बाद आप प्रमाणपत्र डाउनलोड करने में सक्षम हो सकते हैं।",
+          "Payments":"भुगतान",
+          "Here do payment for your services you have applied for after that you can download your certificate.": "यहां अपनी सेवाओं के लिए भुगतान करें जिसके लिए आपने आवेदन किया है उसके बाद आप अपना प्रमाणपत्र डाउनलोड कर सकते हैं।",
+          "Let\'s Fill the Form":"आइए फॉर्म भरें",
+          "Fill the form for services you have applied for.":"आपने जिन सेवाओं के लिए आवेदन किया है, उनके लिए फॉर्म भरें।",
+          "See All Services Provided by ZAP App.":"ZAP ऐप द्वारा प्रदान की जाने वाली सभी सेवाएँ देखें।",
+          "Let\'s make customers to together":"आइए ग्राहकों को एक साथ बनाएं",
+          "Instead of having to buy an entire share, invest any amount you want.": "एक पूरा शेयर खरीदने के बजाय, अपनी मनचाही राशि का निवेश करें।",
+          "ZAP App":"ZAP ऐप",
+
+
+
+
+
+
+
+
         },
         //Marathi LANGUAGE
         'mr_IN': {
@@ -507,6 +572,34 @@ class LocaleString extends Translations {
           "Yes":"होय",
           "yes selected":"होय निवडले",
           "no selected":"निवडलेले नाही",
+          "Services\nSold":"सेवा\nविकल्या",
+          "Payment\nCollected":"पेमेंट\nसंकलित",
+          "Payment\nSent":"पेमेंट\nपाठवले",
+          "Commission\nEarned":"कमिशन\nमिळवले",
+          "Something Went Wrong":"काहीतरी चूक झाली",
+          "forgot your password?": "तुमचा पासवर्ड विसरलात?",
+          "Don't Have an Account? Sign up":"खाते नाही? साइन अप करा",
+          "Please enter valid Number":"कृपया वैध क्रमांक प्रविष्ट करा",
+          "Please enter valid Password":"कृपया वैध पासवर्ड टाका",
+          "REGISTER":"नोंदणी करा",
+          "Referral Code":"रेफरल कोड",
+          "Confirm Password":"पासवर्डची पुष्टी करा",
+          "SIGN UP":"साइन अप करा",
+          "Let\'s go right away!":"चला लगेच जाऊया!",
+          "Done":"झाले",
+          "Certificate":"प्रमाणपत्र",
+          "After completion of your payment process you can be able to download the certificate.":"तुमची पेमेंट प्रक्रिया पूर्ण झाल्यानंतर तुम्ही प्रमाणपत्र डाउनलोड करू शकता.",
+          "Payments":"देयके",
+          "Here do payment for your services you have applied for after that you can download your certificate.": "तुम्ही अर्ज केलेल्या तुमच्या सेवांसाठी देय द्या, त्यानंतर तुम्ही तुमचे प्रमाणपत्र डाउनलोड करू शकता.""Let\'s Fill the Form",
+          "Let\'s Fill the Form":"चला फॉर्म भरा",
+          "Fill the form for services you have applied for.":"तुम्ही अर्ज केलेल्या सेवांसाठी फॉर्म भरा.",
+          "See All Services Provided by ZAP App.":"ZAP अॅपद्वारे प्रदान केलेल्या सर्व सेवा पहा.",
+          "Let\'s make customers to together":"चला एकत्र ग्राहक बनवूया",
+          "Instead of having to buy an entire share, invest any amount you want.": "संपूर्ण शेअर खरेदी करण्याऐवजी, तुम्हाला हवी असलेली रक्कम गुंतवा.",
+          "ZAP App":"ZAP अॅप",
+
+
+
         }
       };
 }
