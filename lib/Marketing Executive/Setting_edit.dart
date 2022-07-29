@@ -2729,77 +2729,77 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
     //   return null;
     // }
 
-    SchedulerBinding.instance
-        .addPostFrameCallback((_) => _showLoaderDialog(context));
-
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    String storeID = prefs.getString("businessID");
-    String token = prefs.getString("token");
-
-    print('$storeID   $token');
-
-    // string to uri
-    var uri =
-        Uri.parse("http://157.230.228.250/set-merchant-general-setting-api/");
-    Map<String, String> headers = {"Authorization": "Token $token"};
-    // create multipart request
-    var request = new http.MultipartRequest("POST", uri);
-
-    request.fields['m_business_id'] = storeID;
-    request.fields['m_business_name'] = nameController.text;
-    request.fields['m_business_category_id'] = id;
-    request.fields['m_pin_code'] = pinController.text;
-    request.fields['m_city'] = cityController.text.capitalize();
-    request.fields['m_area'] = areaController.text.capitalize();
-    request.fields['m_district'] = districtController.text.capitalize();
-    request.fields['m_state'] = stateController.text.capitalize();
-    request.fields['m_address'] = addressController.text.capitalize();
-    request.fields['m_landline_number'] = teleController.text;
-    request.fields['m_alternate_mobile_number'] = mobController.text;
-    request.fields['m_company_email'] = cemailController.text;
-    request.fields['m_alternate_email'] = emailController.text;
-    request.fields['m_pan_number'] = panController.text;
-    request.fields['m_gstin'] = gstController.text;
-    request.fields['m_cin'] = cinController.text;
-    request.fields['m_bank_account_number'] = accController.text;
-    request.fields['m_bank_IFSC_code'] = ifscController.text;
-    request.fields['m_bank_name'] = bnameController.text.capitalize();
-    request.fields['m_bank_branch'] = branchController.text.capitalize();
-    request.fields['m_GSTIN_certificate'] = "";
-    request.fields['m_CIN_certificate'] = "";
-    request.fields['m_business_logo'] = "";
-    request.fields['m_profile_image'] = "";
-    request.fields['m_website_url'] = siteController.text;
-    request.fields['m_business_name_for_billing'] = companyController.text;
-    request.fields['m_billing_address'] = addController.text;
-    request.fields['m_billing_email'] = emailBController.text;
-    request.fields['m_billing_phone'] = phoneController.text;
-    request.fields['m_vat_tin_number'] = tinController.text;
-    request.fields['Entity_Bank_Account_m'] = aleController.text;
-    request.fields['Entity_Account_m'] = nleController.text;
-    request.fields['m_aadhaar_number'] = adharController.text;
-    request.fields['first_name'] = firstController.text;
-    request.fields['last_name'] = lastController.text;
-
-    request.headers.addAll(headers);
-
-    // send
-    var response = await request.send();
-    Navigator.of(context, rootNavigator: true).pop();
-    print(response.statusCode);
-    print(response);
-
-    if (response.statusCode == 200) {
-      print(
-          "***********************************************     Submit     *******************************************************");
-      Navigator.pop(context, true);
-    } else {
-      showInSnackBar("Something went wrong!", 2);
-    }
-
-    // listen for response
-    response.stream.transform(utf8.decoder).listen((value) {
-      print(value);
-    });
+    // SchedulerBinding.instance
+    //     .addPostFrameCallback((_) => _showLoaderDialog(context));
+    //
+    // final SharedPreferences prefs = await SharedPreferences.getInstance();
+    // String storeID = prefs.getString("businessID");
+    // String token = prefs.getString("token");
+    //
+    // print('$storeID   $token');
+    //
+    // // string to uri
+    // var uri =
+    //     Uri.parse("http://157.230.228.250/set-merchant-general-setting-api/");
+    // Map<String, String> headers = {"Authorization": "Token $token"};
+    // // create multipart request
+    // var request = new http.MultipartRequest("POST", uri);
+    //
+    // request.fields['m_business_id'] = storeID;
+    // request.fields['m_business_name'] = nameController.text;
+    // request.fields['m_business_category_id'] = id;
+    // request.fields['m_pin_code'] = pinController.text;
+    // request.fields['m_city'] = cityController.text.capitalize();
+    // request.fields['m_area'] = areaController.text.capitalize();
+    // request.fields['m_district'] = districtController.text.capitalize();
+    // request.fields['m_state'] = stateController.text.capitalize();
+    // request.fields['m_address'] = addressController.text.capitalize();
+    // request.fields['m_landline_number'] = teleController.text;
+    // request.fields['m_alternate_mobile_number'] = mobController.text;
+    // request.fields['m_company_email'] = cemailController.text;
+    // request.fields['m_alternate_email'] = emailController.text;
+    // request.fields['m_pan_number'] = panController.text;
+    // request.fields['m_gstin'] = gstController.text;
+    // request.fields['m_cin'] = cinController.text;
+    // request.fields['m_bank_account_number'] = accController.text;
+    // request.fields['m_bank_IFSC_code'] = ifscController.text;
+    // request.fields['m_bank_name'] = bnameController.text.capitalize();
+    // request.fields['m_bank_branch'] = branchController.text.capitalize();
+    // request.fields['m_GSTIN_certificate'] = "";
+    // request.fields['m_CIN_certificate'] = "";
+    // request.fields['m_business_logo'] = "";
+    // request.fields['m_profile_image'] = "";
+    // request.fields['m_website_url'] = siteController.text;
+    // request.fields['m_business_name_for_billing'] = companyController.text;
+    // request.fields['m_billing_address'] = addController.text;
+    // request.fields['m_billing_email'] = emailBController.text;
+    // request.fields['m_billing_phone'] = phoneController.text;
+    // request.fields['m_vat_tin_number'] = tinController.text;
+    // request.fields['Entity_Bank_Account_m'] = aleController.text;
+    // request.fields['Entity_Account_m'] = nleController.text;
+    // request.fields['m_aadhaar_number'] = adharController.text;
+    // request.fields['first_name'] = firstController.text;
+    // request.fields['last_name'] = lastController.text;
+    //
+    // request.headers.addAll(headers);
+    //
+    // // send
+    // var response = await request.send();
+    // Navigator.of(context, rootNavigator: true).pop();
+    // print(response.statusCode);
+    // print(response);
+    //
+    // if (response.statusCode == 200) {
+    //   print(
+    //       "***********************************************     Submit     *******************************************************");
+    //   Navigator.pop(context, true);
+    // } else {
+    //   showInSnackBar("Something went wrong!", 2);
+    // }
+    //
+    // // listen for response
+    // response.stream.transform(utf8.decoder).listen((value) {
+    //   print(value);
+    // });
   }
 }
