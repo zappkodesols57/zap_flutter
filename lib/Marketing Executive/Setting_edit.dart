@@ -11,6 +11,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zap_flutter/Marketing%20Executive/ME_Business_setting.dart';
 import '../../../constants.dart';
+import 'package:get/get.dart';
 
 class GeneralSettingEdit extends StatefulWidget {
   final String businessName,
@@ -454,7 +455,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
       key: _scaffoldKey,
       appBar: AppBar(
         title: Text(
-          "Business Settings",
+          "Business Settings".tr,
           style: TextStyle(fontFamily: "Sans"),
         ),
         backgroundColor: Color(0xFF6e95fc),
@@ -472,7 +473,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
             onPressed: () {
               _isButtonDisabled ? null : save();
             },
-            child: Text("SAVE"),
+            child: Text("save".tr),
             shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
           ),
         ],
@@ -496,7 +497,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15.0),
                     child: Text(
-                      "Billing Details",
+                      "Billing Details".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -557,7 +558,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Company Name *",
+                          labelText: "Company Name".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -612,7 +613,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "GSTIN",
+                          labelText: "GSTIN".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -762,7 +763,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Phone Number *",
+                          labelText: "Phone Number".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -813,7 +814,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Address *",
+                          labelText: "Address".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -864,7 +865,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Email",
+                          labelText: "Email".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -919,7 +920,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Company PAN Number *",
+                          labelText: "Company PAN Number".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -945,7 +946,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15.0),
                     child: Text(
-                      "Business Basic Details",
+                      "Business Basic Details".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -1006,7 +1007,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Business Name *",
+                          labelText: "Business Name".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1051,7 +1052,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Mobile Number *",
+                          labelText: "Mobile Number".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1103,7 +1104,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Business Category *",
+                          labelText: "Business Category".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1159,7 +1160,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Business Email *",
+                          labelText: "Business Email".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1214,7 +1215,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Alternate Mobile No.",
+                          labelText: "Alternate Mobile No.".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1265,7 +1266,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Website Url",
+                          labelText: "Website Url".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1320,7 +1321,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Alternate Email",
+                          labelText: "Alternate Email".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1346,7 +1347,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15.0),
                     child: Text(
-                      "Address Details",
+                      "Address Details".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -1395,7 +1396,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 20.0,
                         ),
-                        labelText: "State *",
+                        labelText: "State".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1439,7 +1440,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 20.0,
                         ),
-                        labelText: "City *",
+                        labelText: "City".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1493,7 +1494,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 23.0,
                         ),
-                        labelText: "Address *",
+                        labelText: "Address".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1544,7 +1545,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 23.0,
                         ),
-                        labelText: "Area *",
+                        labelText: "Area".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1595,7 +1596,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 23.0,
                         ),
-                        labelText: "District *",
+                        labelText: "District".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1649,7 +1650,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                           color: kPrimaryColorDarkBlue,
                           size: 23.0,
                         ),
-                        labelText: "Pincode*",
+                        labelText: "Pin".tr,
                         labelStyle: TextStyle(
                             fontFamily: "PoppinsLight",
                             fontSize: 13.0,
@@ -1674,7 +1675,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15.0),
                     child: Text(
-                      "Owner Details (Contact Person)",
+                      "Owner Details (Contact Person)".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 17,
@@ -1729,7 +1730,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                         color: kPrimaryColorDarkBlue,
                         size: 23.0,
                       ),
-                      labelText: "First Name *",
+                      labelText: "First Name".tr,
                       labelStyle: TextStyle(
                           fontFamily: "PoppinsLight",
                           fontSize: 13.0,
@@ -1776,7 +1777,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                         color: kPrimaryColorDarkBlue,
                         size: 23.0,
                       ),
-                      labelText: "Last Name *",
+                      labelText: "Last Name".tr,
                       labelStyle: TextStyle(
                           fontFamily: "PoppinsLight",
                           fontSize: 13.0,
@@ -1823,7 +1824,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                         color: kPrimaryColorDarkBlue,
                         size: 23.0,
                       ),
-                      labelText: "Aadhaar Number",
+                      labelText: "Aadhaar Number".tr,
                       labelStyle: TextStyle(
                           fontFamily: "PoppinsLight",
                           fontSize: 13.0,
@@ -1847,7 +1848,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15.0),
                     child: Text(
-                      "Bank Details",
+                      "Bank Details".tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -1911,7 +1912,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Bank Account No.",
+                          labelText: "Bank Account No.".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -1986,7 +1987,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Bank IFSC Code",
+                          labelText: "Bank IFSC Code".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -2037,7 +2038,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Bank Name",
+                          labelText: "Bank Name".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -2088,7 +2089,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Bank Branch",
+                          labelText: "Bank Branch".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -2139,7 +2140,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Name of Legal Entity on Bank Account",
+                          labelText: "Name of Legal Entity on Bank Account".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,
@@ -2190,7 +2191,7 @@ class _MyGeneralSettingEditState extends State<GeneralSettingEdit> {
                             color: kPrimaryColorDarkBlue,
                             size: 23.0,
                           ),
-                          labelText: "Address of Legal Entity on Bank Account",
+                          labelText: "Address of Legal Entity on Bank Account".tr,
                           labelStyle: TextStyle(
                               fontFamily: "PoppinsLight",
                               fontSize: 13.0,

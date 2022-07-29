@@ -203,7 +203,7 @@ class LocaleString extends Translations {
           "area": "क्षेत्र",
           "pin": "पिन कोड",
           "change_pass": "पासवर्ड बदलें",
-          "save": "बचाना",
+          "save": "इकट्ठा",
           "select": "चुनना",
           "male": "पुरुष",
           "female": "मादा",
