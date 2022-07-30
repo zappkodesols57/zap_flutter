@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'S.A.E',
+      title: 'Z.A.P',
       theme: ThemeData(
         textTheme: TextTheme(
           title: TextStyle(color: Colors.white, fontFamily: "Sans"),

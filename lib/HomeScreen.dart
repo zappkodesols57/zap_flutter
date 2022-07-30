@@ -674,7 +674,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
       ),
       bottomNavigationBar: ConvexAppBar(
         backgroundColor: Color(0xFF6e95fc),
-        height: 60.0,
+        height: 70.0,
         style: TabStyle.react,
         items: [
           TabItem(icon: Icons.home, title: 'home_bottom'.tr),
