@@ -24,16 +24,20 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  bool _obscureTextSignup = true;
 
+  _toggleSignup() {
+    setState(() {
+      if (_obscureTextSignup) {
+        _obscureTextSignup = false;
+      } else {
+        _obscureTextSignup = true;
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    bool _obscureTextSignup = true;
-    _toggleSignup() {
-      setState(() {
-        _obscureTextSignup = false;
-      });
-    }
 
     return Scaffold(
       key: _scaffoldKey,
@@ -163,7 +167,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       prefixIcon:
                           Icon(Icons.password, color: Color(0xFF3d68d9)),
                       suffixIcon: GestureDetector(
-                        onTap: _toggleSignup(),
+                        onTap: (){
+                          _toggleSignup();
+                        },
                         child: Icon(
                           _obscureTextSignup
                               ? FontAwesomeIcons.eyeSlash

@@ -194,6 +194,13 @@ class LocaleString extends Translations {
           "Let\'s make customers to together":"Let\'s make customers to together",
           "Instead of having to buy an entire share, invest any amount you want.": "Instead of having to buy an entire share, invest any amount you want.",
           "ZAP App":"ZAP App",
+          "Please enter first name":"Please enter first name",
+          "Please enter last name":"Please enter last name",
+          "Enter mobile number":"Enter mobile number",
+          "please enter password":"please enter password",
+          "Password must contain 8 character":"Password must contain 8 character",
+          "Password not match":"Password not match",
+          "Already Have an Account? Sign in":"Already Have an Account? Sign in",
 
 
 
@@ -395,6 +402,18 @@ class LocaleString extends Translations {
           "Let\'s make customers to together":"आइए ग्राहकों को एक साथ बनाएं",
           "Instead of having to buy an entire share, invest any amount you want.": "एक पूरा शेयर खरीदने के बजाय, अपनी मनचाही राशि का निवेश करें।",
           "ZAP App":"ZAP ऐप",
+          "Please enter first name":"कृपया पहला नाम दर्ज करें",
+          "Please enter last name":"कृपया अंतिम नाम दर्ज करें",
+          "Enter mobile number":"मोबाइल नंबर दर्ज करें",
+          "please enter password":"कृपया पासवर्ड दर्ज करें",
+          "Password must contain 8 character":"पासवर्ड में 8 वर्ण होने चाहिए",
+          "Password not match":"पासवर्ड मेल नहीं खाता",
+          "Already Have an Account? Sign in":"क्या आपके पास पहले से एक खाता मौजूद है? साइन इन करें",
+
+
+
+
+
 
 
 
@@ -597,6 +616,13 @@ class LocaleString extends Translations {
           "Let\'s make customers to together":"चला एकत्र ग्राहक बनवूया",
           "Instead of having to buy an entire share, invest any amount you want.": "संपूर्ण शेअर खरेदी करण्याऐवजी, तुम्हाला हवी असलेली रक्कम गुंतवा.",
           "ZAP App":"ZAP अॅप",
+          "Please enter first name":"कृपया नाव प्रविष्ट करा",
+          "Please enter last name":"कृपया आडनाव प्रविष्ट करा",
+          "Enter mobile number":"मोबाईल नंबर टाका",
+          "please enter password":"कृपया पासवर्ड टाका",
+          "Password must contain 8 character":"पासवर्डमध्ये 8 वर्ण असणे आवश्यक आहे",
+          "Password not match":"पासवर्ड जुळत नाही",
+          "Already Have an Account? Sign in":"आधीपासूनच एक खाते आहे? साइन इन करा",
 
 
 

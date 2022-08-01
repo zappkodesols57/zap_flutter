@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'Authentication/constants.dart';
 import 'Change Password.dart';
 import 'package:get/get.dart';
 import 'Authentication/constants.dart';
@@ -634,7 +635,7 @@ class _MyProfileState extends State<Profile> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: new DropdownButtonFormField<String>(
-                      iconEnabledColor: Colors.black,
+                      iconEnabledColor: Color(0xFF3d68d9),
                       dropdownColor: Colors.white,
                       value: dropdownValue,
                       isExpanded: true,

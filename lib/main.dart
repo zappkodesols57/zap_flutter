@@ -32,10 +32,21 @@ class MyApp extends StatelessWidget {
         canvasColor: Colors.white,
         primaryColor: kPrimaryColorDarkBlue,
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en'),
+        const Locale('hi'),
+        const Locale('mr'),
+      ],
+
 
       debugShowCheckedModeBanner: false,
       translations: LocaleString(),
-      locale: Locale('hi', 'IN'),
+      locale: Locale('en', 'US'),
       home: Splash(),
     );
   }

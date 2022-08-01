@@ -267,8 +267,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 40.0,
                   width: MediaQuery.of(context).size.width,
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: mobileController,
-                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
+                    inputFormatters: [LengthLimitingTextInputFormatter(8)],
                     decoration:  InputDecoration(
                         prefixIcon: Icon(Icons.call, color: Color(0xFF3d68d9)),
                         border: OutlineInputBorder(
