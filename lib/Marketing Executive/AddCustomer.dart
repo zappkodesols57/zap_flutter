@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:zap_flutter/Authentication/Services1.dart';
 import 'package:zap_flutter/Authentication/background.dart';
 import 'package:zap_flutter/Authentication/constants.dart';
 import 'package:get/get.dart';
+
+import 'Courses.dart';
 
 class AddCustomer extends StatelessWidget {
   int tabSelected;
@@ -44,8 +47,8 @@ class AddCustomer extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              AddNewServices(),
-              AddNewCourses(),
+              Servicespage(0),
+              Courses(),
             ],
           ),
         ),
