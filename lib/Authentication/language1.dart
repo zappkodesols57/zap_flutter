@@ -1,12 +1,11 @@
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:zap_flutter/Authentication/Onboarding_Screen1.dart';
-import 'package:zap_flutter/Authentication/constants.dart';
+
+import '../constants.dart';
+import 'Onboarding_Screen1.dart';
 class Language extends StatefulWidget {
-  const Language({Key key}) : super(key: key);
 
   @override
   _LanguageState createState() => _LanguageState();
@@ -23,9 +22,10 @@ class _LanguageState extends State<Language> {
     Get.back();
     Get.updateLocale(locale);
   }
-  bool right = false;
+  String selected = "";
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -38,7 +38,7 @@ class _LanguageState extends State<Language> {
                 height: MediaQuery.of(context).size.height/3.5,
                 width: MediaQuery.of(context).size.width/1,
                 decoration: BoxDecoration(
-                    color: kPrimaryColorDarkBlue,
+                    color: kPrimaryColorBlue,
                     borderRadius: BorderRadius.circular(20.0)
                 ),
 
@@ -50,9 +50,9 @@ class _LanguageState extends State<Language> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    Text("Pick Your Comfort Language",style: TextStyle(
+                    Text("Pick Your Comfort Language",textAlign: TextAlign.center,style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25.0,
+                        fontSize: 20.0,
                         fontWeight: FontWeight.bold
                     ),),
                   ],
@@ -62,18 +62,30 @@ class _LanguageState extends State<Language> {
               alignment: Alignment.center,
               padding: EdgeInsets.all(15.0),
               width: double.maxFinite,
-              child: ListView.separated(
+              child:
+              ListView.separated(
                   shrinkWrap: true,
                   itemBuilder: (context,index){
                     return
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(child: Text(locale[index]['name'],textAlign: TextAlign.center,style: TextStyle(
-                          color:Colors.blue,
-                        ),),onTap: (){
-                          print(locale[index]['name']);
-                          updateLanguage(locale[index]['locale']);
-                        },),
+                        child:RaisedButton(
+                          child: new Text(locale[index]['name']),
+                          textColor:
+                          selected == locale[index]['name'] ? Colors.white : Colors.black,
+                          color: selected == locale[index]['name']
+                              ? (selected == locale[index]['name'] ? kPrimaryColorBlue : Colors.white)
+                              : Colors.white,
+                          onPressed: () => {
+                            setState(() {
+                              selected = locale[index]['name'];
+                            }),
+                            print(locale[index]['name']),
+                            updateLanguage(locale[index]['locale']),
+                          },
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                        ),
                       );
                   }, separatorBuilder: (context,index){
                 return Divider(
@@ -83,15 +95,17 @@ class _LanguageState extends State<Language> {
               ),
             ),
             MaterialButton(
-
-                color: kPrimaryColorDarkBlue,
+                color: kPrimaryColorYellow,
                 child: Text("Next",style: TextStyle(
                     color: Colors.white,
-                    fontSize: 12.0,
+                    fontSize: 13.0,
                     fontWeight: FontWeight.bold
                 ),),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>App()));
+                  // if(selected == selected) {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => App()));
+                  // }
                 })
           ],
         ),

@@ -97,16 +97,16 @@ class _CustomerInfoState extends State<CustomerInfo> {
             ),
             backgroundColor: kPrimaryColorBlue,
             automaticallyImplyLeading: false,
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => AddCustomer(0)));
-                  },
-                  icon: Icon(Icons.person_add))
-            ],
+            // actions: [
+            //   IconButton(
+            //       onPressed: () {
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => AddCustomer(0)));
+            //       },
+            //       icon: Icon(Icons.person_add))
+            // ],
           ),
           body: SingleChildScrollView(
             child: Column(

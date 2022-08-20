@@ -138,12 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => Wallet()));
                 },
               ),
-              IconButton(
-                icon: Icon(Icons.more_vert),
-                onPressed: () {
-                  buildLanguageDialog(context);
-                },
-              )
+
             ],
           ),
           drawer: _buildDrawer(),
@@ -648,7 +643,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
   ];
   PageController _pageController = PageController();
 
-  int _page = 0;
+  int  _page = 0;
 
   @override
   void dispose() {
